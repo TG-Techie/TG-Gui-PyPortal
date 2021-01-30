@@ -53,7 +53,7 @@ screen = DisplayioScreen(
     display=display,
     min_size = 40,
     default = Defaults(
-        margin      = 5,
+        margin      = 3,
         radius      = 20,
         font_size   = 2,
         _fill_color_    = 0x20609f, #0x20609f,
@@ -105,6 +105,5 @@ def run_app_loop():
         gc.collect()
         # print(gc.mem_free())
         for _ in range(10):
-            app._loop_()
             event_loop.loop()
             display.refresh()
